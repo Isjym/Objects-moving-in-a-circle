@@ -1,0 +1,177 @@
+body
+{
+    background-color:rgba(255, 255, 255, 0);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+/*
+Setting up the circle with elements
+*/
+#circle-container, #element-container
+{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    /*border: dashed 1px;*/
+    border-radius: 50%;
+    margin: 0% auto;
+
+    text-align: center;
+}
+
+#center-element
+{
+    position: absolute;
+    display: block;
+
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 1;
+
+    transform-origin: 50% 50%;
+    transition-duration: 250ms;
+    transform: scale(1);
+
+    height: 5rem;
+    width: 5rem;
+
+    border: solid 1px black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#center-element:hover
+{
+    transition-duration: 250ms;
+    transform: scale(1.1);
+}
+
+#center-pic
+{
+    display: block;
+    position: relative;
+    height: 100%;
+    left: -15%;
+}
+
+#element-container ul
+{
+    list-style: none;
+    margin: 0;
+}
+
+#element-container ul li
+{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    display: block;
+    text-align: center;
+
+    background-color: green;
+    border-radius: 50%;
+
+    transform-origin: 50% 50%;
+    transition-duration: 250ms;
+}
+
+#element-container ul li:hover
+{
+    transition-duration: 250ms;
+    width: 5.3rem;
+    height: 5.3rem;
+
+    font-size: 1.3rem;
+    color: white;
+}
+
+#element-container ul li a
+{
+    position: relative;
+    display: block;
+    top: 38%;
+}
+
+/*
+Setting up all elements to align on the circle
+*/
+
+#element-0deg
+{
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#element-90deg
+{
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#element-180deg
+{
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#element-270deg
+{
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*
+Create animation for the circle
+*/
+
+@keyframes circle-animation
+{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(359deg);}
+}
+
+.animation-circle
+{
+    animation: circle-animation 20s infinite linear;
+}
+
+@keyframes circle-animation-back
+{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(-359deg)}
+}
+
+.animation-circle-back
+{
+    animation: circle-animation-back 20s infinite linear;
+}
+
+/*
+https://www.youtube.com/watch?v=yMEhHJBNN_o
+*/

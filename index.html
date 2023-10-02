@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div id="circle-container">
+
+	<div id="center-element">
+		<a href="#" draggable="false">
+			<img draggable="false" id="center-pic" src="https://csgostash.com/img/misc/rare_item.png?id=3a8208a7138f9be71c5c" alt="pic">
+		</a>
+	</div>
+
+	<div id="element-container" class="animation-circle circle-animation">
+		<ul onmouseover="pause_animation()" onmouseout="play_animation()">
+			<li id="element-0deg" class="animation-circle-back circle-animation noselect">
+				<a>0deg</a>
+			</li>
+			<li id="element-90deg" class="animation-circle-back circle-animation noselect">
+				<a>90deg</a>
+			</li>
+			<li id="element-180deg" class="animation-circle-back circle-animation noselect">
+				<a>180deg</a>
+			</li>
+			<li id="element-270deg" class="animation-circle-back circle-animation noselect">
+				<a>270deg</a>
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
