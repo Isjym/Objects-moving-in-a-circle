@@ -14,9 +14,9 @@ function play_animation()
 		animation.style.animationPlayState = 'running';
 	})
 }
-
+//
 //Pause animation
-
+//
 function pause_animation()
 {
 	const elements = document.querySelectorAll(".circle-animation");
