@@ -184,7 +184,7 @@ body {
         animation: circle-animation 20s infinite linear;
     }
 
-    @keyframes circle-animation-back {
+    @keyframes circle-animation-reverse {
         0% {
             transform: rotate(0deg)
         }
@@ -193,10 +193,6 @@ body {
         }
     }
 
-    .animation-circle-back {
-        animation: circle-animation-back 20s infinite linear;
+    .animation-circle-reverse {
+        animation: circle-animation-reverse 20s infinite linear;
     }
-
-    /*
-    https://www.youtube.com/watch?v=yMEhHJBNN_o
-    */
